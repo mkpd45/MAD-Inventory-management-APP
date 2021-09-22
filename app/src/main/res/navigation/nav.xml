@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.inventoryapp.ui.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_productsFragment"
+            app:destination="@id/productsFragment"
+            app:enterAnim="@anim/left_in"
+            app:exitAnim="@anim/left_out"
+            app:popEnterAnim="@anim/right_in"
+            app:popExitAnim="@anim/right_out" />
+        <action
+            android:id="@+id/action_homeFragment_to_stockListFragment"
+            app:destination="@id/stockListFragment"
+            app:enterAnim="@anim/left_in"
+            app:exitAnim="@anim/left_out"
+            app:popEnterAnim="@anim/right_in"
+            app:popExitAnim="@anim/right_out" />
+        <action
+            android:id="@+id/action_homeFragment_to_locationListFragment"
+            app:destination="@id/locationListFragment"
+            app:enterAnim="@anim/left_in"
+            app:exitAnim="@anim/left_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/productsFragment"
+        android:name="com.example.inventoryapp.ui.ProductsFragment"
+        android:label="Products"
+        tools:layout="@layout/fragment_products" >
+        <action
+            android:id="@+id/action_productsFragment_to_addProductFragment"
+            app:destination="@id/addProductFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_productsFragment_to_maintainProductFragment"
+            app:destination="@id/maintainProductFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.inventoryapp.ui.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/staffListFragment"
+        android:name="com.example.inventoryapp.ui.StaffListFragment"
+        android:label="Staff List"
+        tools:layout="@layout/fragment_staff_list" />
+    <fragment
+        android:id="@+id/staffInsertFragment"
+        android:name="com.example.inventoryapp.ui.StaffInsertFragment"
+        android:label="Insert"
+        tools:layout="@layout/fragment_staff_insert" />
+    <fragment
+        android:id="@+id/staffUpdateFragment"
+        android:name="com.example.inventoryapp.ui.StaffUpdateFragment"
+        android:label="Update"
+        tools:layout="@layout/fragment_staff_update" />
+    <fragment
+        android:id="@+id/supplierListFragment"
+        android:name="com.example.inventoryapp.ui.SupplierListFragment"
+        android:label="Supplier List"
+        tools:layout="@layout/fragment_supplier_list" />
+    <fragment
+        android:id="@+id/supplierInsertFragment"
+        android:name="com.example.inventoryapp.ui.SupplierInsertFragment"
+        android:label="Insert"
+        tools:layout="@layout/fragment_supplier_insert" />
+    <fragment
+        android:id="@+id/supplierUpdateFragment"
+        android:name="com.example.inventoryapp.ui.SupplierUpdateFragment"
+        android:label="Update"
+        tools:layout="@layout/fragment_supplier_update" />
+    <fragment
+        android:id="@+id/addProductFragment"
+        android:name="com.example.inventoryapp.ui.AddProductFragment"
+        android:label="fragment_add_product"
+        tools:layout="@layout/fragment_add_product" />
+    <dialog
+        android:id="@+id/maintainProductFragment"
+        android:name="com.example.inventoryapp.ui.MaintainProductFragment"
+        android:label="fragment_maintain_product"
+        tools:layout="@layout/fragment_maintain_product" />
+    <fragment
+        android:id="@+id/stockListFragment"
+        android:name="com.example.inventoryapp.ui.StockListFragment"
+        android:label="Product stock list"
+        tools:layout="@layout/fragment_stock_list">
+        <action
+            android:id="@+id/action_stockListFragment_to_stockActionFragment"
+            app:destination="@id/stockActionFragment"
+            app:enterAnim="@anim/left_in"
+            app:exitAnim="@anim/left_out"
+            app:popEnterAnim="@anim/right_in"
+            app:popExitAnim="@anim/right_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/stockActionFragment"
+        android:name="com.example.inventoryapp.ui.StockActionFragment"
+        android:label="Stock "
+        tools:layout="@layout/fragment_stock_action" />
+    <fragment
+        android:id="@+id/locationListFragment"
+        android:name="com.example.inventoryapp.ui.LocationListFragment"
+        android:label="fragment_location_list"
+        tools:layout="@layout/fragment_location_list" >
+        <action
+            android:id="@+id/action_locationListFragment_to_locationDetailFragment"
+            app:destination="@id/locationDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationDetailFragment"
+        android:name="com.example.inventoryapp.ui.LocationDetailFragment"
+        android:label="fragment_location_detail"
+        tools:layout="@layout/fragment_location_detail" />
+</navigation>

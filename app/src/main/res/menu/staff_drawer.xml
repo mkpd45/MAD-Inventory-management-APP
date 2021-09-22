@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_logout"
+        android:title="@string/logout" />
+
+    <group android:id="@+id/group1">
+        <item
+            android:id="@+id/homeFragment"
+            android:checkable="true"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home" />
+    </group>
+    <group android:id="@+id/group2">
+        <item
+            android:id="@+id/staffListFragment"
+            android:checkable="true"
+            android:icon="@drawable/ic_num1"
+            android:title="@string/stock" />
+        <item
+            android:id="@+id/productsFragment"
+            android:checkable="true"
+            android:icon="@drawable/ic_num2"
+            android:title="@string/product_management" />
+        <item
+            android:id="@+id/supplierListFragment"
+            android:checkable="true"
+            android:icon="@drawable/ic_num3"
+            android:title="@string/supplier_management" />
+    </group>
+
+</menu>

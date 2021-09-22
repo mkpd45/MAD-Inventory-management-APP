@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/loginFragment"
+        android:checkable="true"
+        android:icon="@drawable/ic_login"
+        android:title="@string/login" />
+
+    <group android:id="@+id/group1">
+        <item
+            android:id="@+id/homeFragment"
+            android:checkable="true"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home" />
+    </group>
+
+</menu>
